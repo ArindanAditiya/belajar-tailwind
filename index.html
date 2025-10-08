@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      label div.toggle-circle {
+        transition: 0.1s;
+      }
+      #toggle-mode:checked ~ label .toggle-circle {
+        @apply translate-x-[20px];
+      }
+      .toggle-btn:active .toggle-circle {
+        @apply w-full;
+      }
+      #toggle-mode:checked ~ label:active .toggle-circle {
+        @apply translate-x-[0px];
+      }
+    </style>
   </head>
-  <body class="font-inter dark:bg-gray-900">
+
+  <!-- dark mode implementasion -->
+  <body class="font-inter dark:bg-gray-900 dark:text-gray-300">
+    <!-- <body class="font-inter"> -->
     <h1 class="mb-3 text-6xl font-bold text-center">
       Mari Belajar
       <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Melupakannya</span>
@@ -25,7 +43,7 @@
     </div>
 
     <section class="mt-10 w-full max-w-4xl mx-auto px-5">
-      <h2 class="mb-2 text-[40px] font-[1000] text-cyan-800">Belajar Mengenai Typography pada TailwindCSS</h2>
+      <h2 class="mb-2 text-[40px] font-[1000] text-cyan-600">Belajar Mengenai Typography pada TailwindCSS</h2>
 
       <p class="mb-2 text-large font-bold text-cyan-600">By <span class="text-cyan-700">Arindan Aditiya</span>, 11 September 2025</p>
 
@@ -66,12 +84,13 @@
 
     <hr class="my-20" />
 
+    <!-- dark mode button -->
     <div class="flex items-center justify-center gap-1">
       <span>light</span>
       <input class="hidden" type="checkbox" name="" id="toggle-mode" />
       <label for="toggle-mode">
-        <div class="w-10 h-5 p-0.5 bg-cyan-700 rounded-full cursor-pointer">
-          <div class="h-full w-1/2 bg-cyan-300 rounded-full"></div>
+        <div class="toggle-btn w-10 h-5 bg-cyan-700 rounded-full cursor-pointer">
+          <div class="toggle-circle h-full w-1/2 bg-cyan-300 rounded-full"></div>
         </div>
       </label>
       <span>dark</span>
@@ -103,5 +122,13 @@
       </form>
     </div>
     <div class="mb-[600px]"></div>
+    <script>
+      const toggelBtn = document.querySelector(".toggle-btn");
+      const html = document.querySelector("html");
+      toggelBtn.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        // alert("anjay");
+      });
+    </script>
   </body>
 </html>
