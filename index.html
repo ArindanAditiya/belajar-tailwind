@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="">
+<html id="top" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/brows                            r@4"></script>
 
     <style type="text/tailwindcss">
       label div.toggle-circle {
@@ -24,8 +24,8 @@
   </head>
 
   <!-- dark mode implementasion -->
-  <body class="font-inter dark:bg-gray-900 dark:text-gray-300">
-    <!-- <body class="font-inter"> -->
+  <!-- <body class="font-inter dark:bg-gray-900 dark:text-gray-300"> -->
+  <body class="font-inter">
     <h1 class="mb-3 text-6xl font-bold text-center">
       Mari Belajar
       <span class="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Melupakannya</span>
@@ -65,7 +65,7 @@
       class="max-w-xl h-96 bg-slate-300 mt-[42px] mx-auto overflow-y-scroll bg-fixed"
       style="background-image: url('https://images.unsplash.com/photo-1538409714174-4a382cff489f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
     >
-      <p class="p-5 text-2xl">
+      <p class="p-5 text-2xl text-white">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo ipsa asperiores maxime ratione fuga velit, blanditiis atque delectus quis repellendus quia deserunt dolorum ipsum ab expedita corrupti. Delectus consequuntur quae rem
         praesentium deleniti corrupti id quia omnis culpa vero voluptatibus quo architecto libero, itaque officiis qui minima sint, assumenda voluptatem aperiam? Iste, officiis accusantium laboriosam modi totam nisi dignissimos, quas
         placeat est et tempore. Est perferendis labore similique deleniti doloribus iure repudiandae quo neque officiis suscipit quasi autem corporis, error alias. Praesentium temporibus deserunt molestiae, dicta enim sit repellat. Saepe
@@ -106,7 +106,7 @@
       </p>
     </div>
 
-    <div class="max-w-lg mx-auto rounded-xl px-4 py-4 shadow-md border border-slate-200">
+    <div class="max-w-lg mx-auto rounded-xl px-4 py-4 shadow-md border border-slate-200 mb-10">
       <form action="">
         <label class="mb-1" for="username">
           <span>Email</span>
@@ -121,7 +121,40 @@
         </label>
       </form>
     </div>
+
+    <!-- transform, transision,animation -->
+    <div class="h-40 w-40 bg-blue-400 rounded-lg mx-auto shadow-lg hover:rotate-180 hover:bg-pink-500 transition origin-top-left"></div>
+
+    <div class="mt-10 h-40 w-40 rounded-lg mx-auto bg-pink-500 shadow-lg group">
+      <div class="mt-10 h-40 w-40 rounded-lg mx-auto shadow-lg bg-blue-400 transition origin-top-left group-hover:rotate-180 duration-1000 delay-1000"></div>
+    </div>
+
+    <div class="mt-10 h-40 w-40 rounded-full mx-auto border-b-5 border-t-5 border-blue-400 animate-spin"></div>
+
+    <div class="mt-10 h-40 w-40 bg-pink-400 rounded-lg mx-auto animate-spin"></div>
+
+    <hr class="my-20 border-t-4" />
+
+    <div class="container px-8 mx-auto">
+      <div class="border rounded-lg shadow-lg p-10 relative">
+        <!-- x btn -->
+        <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 left-1/2 -translate-x-1/2 cursor-pointer"><span class="text-sm m-auto">❌</span></div>
+
+        <img class="w-20 float-left mr-3" src="https://images.unsplash.com/photo-1538409714174-4a382cff489f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati laborum nam aut similique accusamus quaerat, sint consequatur quisquam sunt totam asperiores nulla animi dignissimos fuga ab! Culpa veritatis enim nobis
+          reiciendis? Sed voluptatibus enim, quaerat recusandae molestiae nihil excepturi inventore doloremque odit ipsum ipsa animi fugiat quis voluptas dolore. Eum!
+        </p>
+      </div>
+    </div>
+
     <div class="mb-[600px]"></div>
+
+    <!-- back btn -->
+    <a href="#top" class="w-10 h-10 flex bg-blue-300 rounded-full fixed bottom-5 right-5 animate-bounce cursor-pointer">
+      <span class="text-md m-auto">🔝</span>
+    </a>
+
     <script>
       const toggelBtn = document.querySelector(".toggle-btn");
       const html = document.querySelector("html");
