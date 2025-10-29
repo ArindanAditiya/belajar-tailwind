@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html id="top" class="scroll-smooth">
+<html id="top">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/brows                            r@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
       label div.toggle-circle {
         transition: 0.1s;
-      }
-      #toggle-mode:checked ~ label .toggle-circle {
-        @apply translate-x-[20px];
-      }
-      .toggle-btn:active .toggle-circle {
-        @apply w-full;
-      }
-      #toggle-mode:checked ~ label:active .toggle-circle {
-        @apply translate-x-[0px];
       }
     </style>
   </head>
@@ -90,7 +81,7 @@
       <input class="hidden" type="checkbox" name="" id="toggle-mode" />
       <label for="toggle-mode">
         <div class="toggle-btn w-10 h-5 bg-cyan-700 rounded-full cursor-pointer">
-          <div class="toggle-circle h-full w-1/2 bg-cyan-300 rounded-full"></div>
+          <div class="toggle-circle h-full w-1/2 bg-cyan-300 rounded-full transition duration-[0.1s]"></div>
         </div>
       </label>
       <span>dark</span>
@@ -122,7 +113,7 @@
       </form>
     </div>
 
-    <!-- transform, transision,animation -->
+    <!-- 7. transform, transision,animation -->
     <div class="h-40 w-40 bg-blue-400 rounded-lg mx-auto shadow-lg hover:rotate-180 hover:bg-pink-500 transition origin-top-left"></div>
 
     <div class="mt-10 h-40 w-40 rounded-lg mx-auto bg-pink-500 shadow-lg group">
@@ -135,21 +126,84 @@
 
     <hr class="my-20 border-t-4" />
 
+    <!-- 8. layout -->
     <div class="container px-8 mx-auto">
       <div class="border rounded-lg shadow-lg p-10 relative">
         <!-- x btn -->
         <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 left-1/2 -translate-x-1/2 cursor-pointer"><span class="text-sm m-auto">❌</span></div>
 
-        <img class="w-20 float-left mr-3" src="https://images.unsplash.com/photo-1538409714174-4a382cff489f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img class="w-20 float-left mr-3" src="https://picsum.photos/200/300?random=5" alt="" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati laborum nam aut similique accusamus quaerat, sint consequatur quisquam sunt totam asperiores nulla animi dignissimos fuga ab! Culpa veritatis enim nobis
           reiciendis? Sed voluptatibus enim, quaerat recusandae molestiae nihil excepturi inventore doloremque odit ipsum ipsa animi fugiat quis voluptas dolore. Eum!
         </p>
       </div>
+      .
     </div>
 
-    <div class="mb-[600px]"></div>
+    <!-- Colums -->
+    <h2 class="mb-4 text-center text-xl font-bold">Colums</h2>
+    <div class="container border p-10 my-8 mx-auto shadow-lg rounded-lg columns-3">
+      <img src="https://picsum.photos/600/400?random=2" alt="" class="mb-4" />
+      <img src="https://picsum.photos/600/400?random=3" alt="" class="mb-4" />
+      <img src="https://picsum.photos/600/400?random=4" alt="" class="mb-4" />
+      <img src="https://picsum.photos/600/400?random=5" alt="" class="mb-4" />
+      <img src="https://picsum.photos/600/400?random=6" alt="" class="mb-4" />
+      <img src="https://picsum.photos/600/400?random=7" alt="" class="mb-4" />
+    </div>
 
+    <!-- 9. responsive design x ngulik-->
+    <h2 class="mb-4 text-center text-3xl font-bold">9. RESPONSIVE DESIGN</h2>
+
+    <div class="container px-6 mx-auto max-w-md sm:max-w-lg md:max-w-2xl lg:flex lg:max-w-full lg:p-0">
+      <div class="lg:flex-1 lg:p-20">
+        <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl">Arindan <span class="text-sky-500">Aditiya</span></h3>
+
+        <img class="mt-4 rounded-xl shadow-xl object-cover sm:h-60 sm:w-full lg:hidden" src="https://picsum.photos/600/400?random=3" alt="card image" />
+
+        <h4 class="mt-6 text-3xl font-semibold text-slate-800">Mari Belajar Melupakannya Selamanya Bersama Arindan</h2>
+        <p class="mt-2 text-base first-letter:text-5xl first-letter:float-start first-letter:m-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore delectus reprehenderit doloribus deleniti natus. Cum ipsam, rerum suscipit in provident qui dolore, eos maiores, rem dignissimos veniam error sed. Cumque! Lorem
+          ipsum ternyata belkum siap aku kehilangan dirimu, belum sanggup untuk jauh dari mu yanag masih selaluada dalam hati ku.
+        </p>
+        <div class="mt-4">
+          <a
+            class="inline-block font-bold bg-gradient-to-br from-purple-700 via-red-400 to-yellow-300 text-white hover:from-yellow-300 hover:via-red-400 hover:to-purple-700 border-2 rounded-sm shadow-sm cursor-pointer text-base px-2 py-2"
+            href=""
+          >
+            Follow Instagram Arindan
+          </a>
+        </div>
+      </div>
+      <div class="lg:flex-1 flex justify-end">
+        <img class="hidden lg:shadow lg:shadow-3xl lg:block object-cover rounded-l-full" src="https://picsum.photos/600/400?random=3" alt="" />
+      </div>
+    </div>
+
+    <!-- ngulik flex -->
+    <div class="bg-blue-200 mt-7 mx-auto container w-full p-6 flex flex-row justify-center gap-3">
+      <div class="card">
+        <img class="w-full h-50 object-cover" src="https://picsum.photos/600/400?random=2" alt="">
+        <div class="p-3">
+          <h4 class="text-xl font-bold my-[10px] text-slate-800">Image Title</h4>
+          <p class="text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur id quis, et odit unde quidem impedit laboriosam ipsa minus deserunt.</p>
+        </div>
+        </div>
+  
+      </div>
+
+    <h1>Hello Arindan Aditiya</h1>  
+    <h2>Hello Arindan Aditiya</h1>  
+    <h3>Hello Arindan Aditiya</h3>  
+    <h4>Hello Arindan Aditiya</h4>  
+    <h5>Hello Arindan Aditiya</h5>  
+    <h6>Hello Arindan Aditiya</h6>  
+
+    .btn
+  
+
+    <!-- _____________________________________ -->
+    <div class="mb-[600px]"></div>
     <!-- back btn -->
     <a href="#top" class="w-10 h-10 flex bg-blue-300 rounded-full fixed bottom-5 right-5 animate-bounce cursor-pointer">
       <span class="text-md m-auto">🔝</span>

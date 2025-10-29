@@ -1,6 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import "tailwindcss";
+
+/* font default */
 @theme {
   --font-inter: "Inter", sans-serif;
 }
+
+/* dark-mode */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* set default h1 */
+@layer base {
+  h1 {
+    @apply text-5xl font-bold my-6;
+  }
+  h2 {
+    @apply text-4xl font-bold my-5;
+  }
+  h3 {
+    @apply text-3xl font-bold my-4;
+  }
+  h4 {
+    @apply text-2xl font-bold my-3;
+  }
+  h5 {
+    @apply text-xl font-bold my-2;
+  }
+  h6 {
+    @apply text-lg font-bold my-2;
+  }
+}
+
+@layer components {
+  .card {
+    @apply w-80 bg-white rounded-xl shadow-lg overflow-hidden;
+  }
+}
+
+@layer utilities {
+  #toggle-mode:checked ~ label .toggle-circle {
+    @apply translate-x-[20px];
+  }
+  .toggle-btn:active .toggle-circle {
+    @apply w-full;
+  }
+  #toggle-mode:checked ~ label:active .toggle-circle {
+    @apply translate-x-[0px];
+  }
+}

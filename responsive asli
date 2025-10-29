@@ -1,0 +1,12 @@
+<div class="container px-6 mx-auto max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+      <h3 class="text-4xl font-bold text-slate-800">Arindan <span class="text-sky-500">Aditiya</span></h3>
+      <img class="mt-4 rounded-xl shadow-xl object-cover" src="https://picsum.photos/600/400?random=3" alt="" />
+      <h2 class="mt-6 text-2xl font-semibold text-slate-800">Mari Belajar Melupakannya Selamanya Bersama Arindan</h2>
+      <p class="mt-2 text-slate-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore delectus reprehenderit doloribus deleniti natus. Cum ipsam, rerum suscipit in provident qui dolore, eos maiores, rem dignissimos veniam error sed. Cumque! Lorem ipsum
+        ternyata belkum siap aku kehilangan dirimu, belum sanggup untuk jauh dari mu yanag masih selaluada dalam hati ku.
+      </p>
+      <div class="mt-4">
+        <a class="inline-block px-2 py-5 bg-red-600 text-white rounded-lg shadow-lg cursor-pointer" href=""> Follow Instagram Arindan </a>
+      </div>
+    </div>
